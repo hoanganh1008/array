@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="keyword">
+<button onclick="translate">dịch</button>
+<div id="result"></div>
+<script>
+  let timkiem=''
+  let a=['người','chim','chuột'];
+  let b=['human','mouse','bird'];
+  function find(key)
+  {
+      for (i=1;i<=b.length;i++)
+      {
+          if(key==b[i])
+              return i;
+      }
+      return -1
+  }
+  function translate(key)
+  {
+      let index= find(key);
+      if(index>=0){
+          return a[index];
+      }
+      else return 'k tìm thấy'
+
+  }
+  function getValue()
+  {
+      let inputtext=document.getElementById('keyword').value;
+      let result=translate(inputtext);
+      document.getElementById('result').innertext=result
+  }
+</script>
+</body>
+</html>

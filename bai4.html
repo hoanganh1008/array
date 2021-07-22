@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [2, 3, 5, -4, -6, 9, 10, 23, 30]
+    first = 0
+    last = a.length - 1
+    for (let i = 1; i <= a.length/2; i++) {
+        let b = a[first]
+        a[first] = a[last]
+        a[last] = b
+        first++
+        last--
+    }
+    document.write(a)
+</script>
+</body>
+</html>
